@@ -1,8 +1,10 @@
-$screen-wrap-delay: ($midi-duration / 2);
+@use "../config/variables";
+
+$screen-wrap-delay: calc(variables.$midi-duration / 2);
 
 
 .screen {
-    background-color: $white;
+    background-color: variables.$white;
     bottom: 0;
     left: 0;
     opacity: 0;
@@ -11,9 +13,9 @@ $screen-wrap-delay: ($midi-duration / 2);
     position: fixed;
     right: 0;
     top: 0;
-    transition: opacity $midi-duration $ease,
-                transform $base-duration $ease-cubic-sharp;
-    z-index: $z_layer_infront;
+    transition: opacity variables.$midi-duration variables.$ease,
+                transform variables.$base-duration variables.$ease-cubic-sharp;
+    z-index: variables.$z_layer_infront;
 
     &.is-active {
         opacity: 1;
@@ -29,7 +31,7 @@ $screen-wrap-delay: ($midi-duration / 2);
     pointer-events: none;
 
     &.is-intro {
-        background-color: $white;
+        background-color: variables.$white;
         }
     }
 
@@ -39,7 +41,7 @@ $screen-wrap-delay: ($midi-duration / 2);
     background-color: transparent;
     opacity: 1;
     transform: translate3d( 0, 100%, 0 );
-    z-index: $z_layer_09;
+    z-index: variables.$z_layer_09;
 
     &.is-active {
         transform: translate3d( 0, 0, 0 );
@@ -52,14 +54,14 @@ $screen-wrap-delay: ($midi-duration / 2);
         }
     }
 .project-view__pane {
-    background-color: $white;
+    background-color: variables.$white;
     min-height: 100%;
     }
 
 
 
 .info {
-    background-color: $dark;
+    background-color: variables.$dark;
     cursor: url( /assets/imgs/x--light.png ) 0 0, auto;
     pointer-events: none;
 
@@ -68,14 +70,14 @@ $screen-wrap-delay: ($midi-duration / 2);
         }
     }
 .info__text {
-    color: $black;
+    color: variables.$black;
     max-width: 700px;
     min-height: 50px;
-    min-width: 320px;
-    margin:0 auto;
+    min-width: 75%;
+    margin: 0 12.5%;
 
     p a {
-        border-bottom: 2px solid $white;
+        border-bottom: 2px solid variables.$black;
         }
 }
 
@@ -83,6 +85,6 @@ $screen-wrap-delay: ($midi-duration / 2);
 
 .intro,
 .overlay.is-intro {
-    transition-duration: $long-duration;
-    transition-timing-function: $ease-out;
+    transition-duration: variables.$long-duration;
+    transition-timing-function: variables.$ease-out;
     }
