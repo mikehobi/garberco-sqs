@@ -1,8 +1,10 @@
+@use "../config/variables";
+
 .animate {
     opacity: 0;
-    transform: translate3d( 0, $bump-size, 0 );
-    transition: opacity $long-duration $ease-out,
-                transform $base-duration $ease-out;
+    transform: translate3d( 0, variables.$bump-size, 0 );
+    transition: opacity variables.$long-duration variables.$ease-out,
+                transform variables.$base-duration variables.$ease-out;
 
     &.is-active {
         opacity: 1;
@@ -15,7 +17,7 @@
 
 
 .animate--delayed {
-    transition-delay: $base-duration;
+    transition-delay: variables.$base-duration;
     }
 
 
@@ -25,5 +27,5 @@
 
 
 .animate--horz {
-    transform: translate3d( $bump-size, 0, 0 );
+    transform: translate3d( variables.$bump-size, 0, 0 );
     }

@@ -1,3 +1,5 @@
+@use "../config/variables";
+
 ._video {
     position: relative;
     }
@@ -17,7 +19,7 @@
     pointer-events: none;
     position: absolute;
     top: 0;
-    transition: opacity $base-duration $ease;
+    transition: opacity variables.$base-duration variables.$ease;
     width: 100%;
     }
 ._video__playback {
@@ -26,7 +28,7 @@
     position: absolute;
     top: 50%;
     transform: translate3d( -50%, -50%, 0 );
-    transition: opacity $base-duration $ease;
+    transition: opacity variables.$base-duration variables.$ease;
     }
 
 

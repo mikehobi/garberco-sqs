@@ -1,3 +1,6 @@
+@use "../config/mixins";
+@use "../config/variables";
+
 .header {
     background-color: transparent;
     font-size: 0;
@@ -5,11 +8,11 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: $z_layer_infront ;
-    @include layout-frame();
+    z-index: variables.$z_layer_infront ;
+    @include mixins.layout-frame();
     }
 .header__nav {
-    transition: opacity $base-duration $ease;
+    transition: opacity variables.$base-duration variables.$ease;
     }
 .header__nav--about {
     text-align: left;

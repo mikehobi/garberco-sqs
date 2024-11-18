@@ -1,3 +1,5 @@
+@use "../config/variables";
+
 /******************************************************************************
  * Background Images
 *******************************************************************************/
@@ -40,7 +42,7 @@
     vertical-align: top;
     }
 .-topper {
-    padding-top: ($expander-padding + 90px);
+    padding-top: (variables.$expander-padding + 90px);
     }
 .-nopad {
     padding-bottom: 0 !important;
