@@ -14,8 +14,19 @@ This walks through getting up and running ( in theory ).
 * Run `npm i`
 * Run `npm start`
 
-
 ### Deployments
+
+* Connect sqaurespace developer mode to your github or get write access to current, it's currently set to (https://github.com/mikehobi/garberco-sqs-template)
+* Clone this template into the `build` folder: `git clone https://github.com/mikehobi/garberco-sqs-template.git build`
+* Continue with development, and `git commit` and `git push` within `/build` to push changes directly to repo.
+* Kind of jenky...
+* Could write a script to do this
+
+
+### Deployments (OLD)
+
+> This is all old and will not work. Squarespace has updated and removed `/template.git` repos for projects.
+
 Your first deployment to Squarespace using this Scaffold will require you to clone the current repository from your site first in order to pull down the correct `git` history. This walks through deploying our `Foobar` project.
 
 * Trash the `build` directory created by the Squarespace toolbelt: `rm -rf build`
