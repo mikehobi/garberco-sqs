@@ -18,7 +18,7 @@ const env = {
      * @description The development environment CONST.
      *
      */
-    DEV: DEV,
+    DEV,
 
 
     /**
@@ -28,7 +28,7 @@ const env = {
      * @description The production environment CONST.
      *
      */
-    PROD: PROD,
+    PROD,
 
 
     /**

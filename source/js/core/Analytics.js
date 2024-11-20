@@ -99,7 +99,7 @@ class Analytics {
             screenHeight: window.screen.height,
             screenWidth: window.screen.width,
             title: websiteTitle,
-            websiteId: websiteId,
+            websiteId,
             templateId: websiteId
         };
 

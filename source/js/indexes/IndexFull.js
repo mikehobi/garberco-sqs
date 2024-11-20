@@ -9,7 +9,7 @@ import bar from "../bar";
 import Hammer from "hammerjs";
 
 
-const Vimeo = require('vimeo').Vimeo;
+const Vimeo = require("vimeo").Vimeo;
 const client = new Vimeo("9d4f4417c518c95db3f8c0461eb7da3e59e7b289", "23AxUag/dzswqGCSY6rJdoWMsw2MnYadh4fecPP9JJiXEOS/cVaAkRrsh755tu4gEZPon9tS+j0eyN8x+2Orke5W0aGarrnfjONsurvJt8Wdv9mMQNPfz9AwpKGi+Onn", "15807db98b40203e65427ac71121c89a");
 
 
@@ -17,8 +17,8 @@ const client = new Vimeo("9d4f4417c518c95db3f8c0461eb7da3e59e7b289", "23AxUag/dz
 
 let instance = null;
 const animator = new Controller();
-const _gridTitleTpl = `<div class="listing__title js-listing-title" data-title="{title}"><h3 class="listing__title__text h3">{text}</h3></div>`;
-const _gridWrapTpl = `<div class="listing__grid js-listing-project grid grid--index"></div>`;
+const _gridTitleTpl = "<div class=\"listing__title js-listing-title\" data-title=\"{title}\"><h3 class=\"listing__title__text h3\">{text}</h3></div>";
+const _gridWrapTpl = "<div class=\"listing__grid js-listing-project grid grid--index\"></div>";
 const _gridItemTpl = `
 <div class="listing__tile grid__item__small js-listing-tile">
     <div class="grid__photo grid__photo--small animate animate--fade js-animate">
@@ -336,9 +336,9 @@ class IndexFull {
         const _this = this;
 
         client.request({
-            method: 'GET',
+            method: "GET",
             path: `/videos/${vimeoId}`,
-        }, function (error, body, status_code, headers) {
+        }, (error, body, status_code, headers) => {
             const vData = body;
 
             _this.vimeos[ vimeoId ] = vData;
