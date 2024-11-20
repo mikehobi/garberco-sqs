@@ -195,6 +195,18 @@ class VideoVimeo {
             }
         });
 
+        mediabox.addMediaEvent( this.data.id, "play", () => {
+            if (this.$node[ 0 ].classList.contains("is-active")) {
+                this.$node.addClass("is-playing");
+            }
+        });
+
+        mediabox.addMediaEvent( this.data.id, "pause", () => {
+            if (this.$node[ 0 ].classList.contains("is-active")) {
+                this.$node.removeClass("is-playing");
+            }
+        });
+
         mediabox.addMediaEvent( this.data.id, "ended", () => {
             mediabox.stopMedia( this.data.id ).setMediaProp( this.data.id, "currentTime", 0 );
 
