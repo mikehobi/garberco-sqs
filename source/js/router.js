@@ -128,7 +128,7 @@ const router = {
     prepPage () {
         this.root = null;
 
-        const path = window.location.pathname.split( '/' );
+        const path = window.location.pathname.split( "/" );
         const segmentOne = path [ 1 ];
 
         // Index?

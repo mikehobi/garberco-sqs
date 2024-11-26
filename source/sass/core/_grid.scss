@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "../config/variables";
+
 /******************************************************************************
  * Columns
 *******************************************************************************/
@@ -6,10 +9,10 @@
     vertical-align: middle;
     }
 
-
-@each $col in $grid-columns {
-    .-column--#{$col}of#{$grid-length} {
-        width: percentage( $col / $grid-length );
+    
+@each $col in variables.$grid-columns {
+    .-column--#{$col}of#{variables.$grid-length} {
+        width: calc($col / variables.$grid-length);
         }
 }
 
@@ -29,18 +32,18 @@
  * Containers
 *******************************************************************************/
 .wrapper {
-    padding-left: $wrapper-padding;
-    padding-right: $wrapper-padding;
+    padding-left: variables.$wrapper-padding;
+    padding-right: variables.$wrapper-padding;
     }
 .expander {
-    padding-bottom: $expander-padding;
-    padding-top: $expander-padding;
+    padding-bottom: variables.$expander-padding;
+    padding-top: variables.$expander-padding;
     }
 .expander-top {
-    padding-top: $expander-padding;
+    padding-top: variables.$expander-padding;
     }
 .expander-bottom {
-    padding-bottom: $expander-padding;
+    padding-bottom: variables.$expander-padding;
     }
 
 
@@ -73,8 +76,8 @@
     font-size: 0;
     margin: 0;
     padding-bottom: 0;
-    padding-left: $grid-padding;
-    padding-right: $grid-padding;
+    padding-left: variables.$grid-padding;
+    padding-right: variables.$grid-padding;
     position: relative;
     width: auto;
     }
@@ -105,28 +108,28 @@
         transform: translate3d( -50%, -50%, 0 );
         }
     .image--tall {
-        height: #{"calc( ~\"100% - (#{$grid-padding} * 2)\" )"};
+        height: #{"calc( ~\"100% - (#{variables.$grid-padding} * 2)\" )"};
         width: auto;
         }
     .image--wide {
         height: auto;
-        width: #{"calc( ~\"100% - (#{$grid-padding} * 2)\" )"};
+        width: #{"calc( ~\"100% - (#{variables.$grid-padding} * 2)\" )"};
         }
 }
 .grid__photo--small {
     .image--tall {
-        height: #{"calc( ~\"100% - #{$grid-padding}\" )"};
+        height: #{"calc( ~\"100% - #{variables.$grid-padding}\" )"};
         width: auto;
         }
     .image--wide {
         height: auto;
-        width: #{"calc( ~\"100% - #{$grid-padding}\" )"};
+        width: #{"calc( ~\"100% - #{variables.$grid-padding}\" )"};
         }
 }
 .vertical-video{
   .grid__photo--small{
     .image{
-      height: #{"calc( ~\"100% - #{$grid-padding}\" )"};
+      height: #{"calc( ~\"100% - #{variables.$grid-padding}\" )"};
       width: auto;
     }
   }

@@ -1,3 +1,5 @@
+@use "../config/variables";
+
 /******************************************************************************
  * Icons: Base
 *******************************************************************************/
@@ -21,10 +23,10 @@
     vertical-align: middle;
     }
 .icon__svg {
-    fill: $white;
+    fill: variables.$white;
     }
 .icon__svg--dark {
-    fill: $black;
+    fill: variables.$black;
     }
 
 

@@ -1,3 +1,5 @@
+@use "variables";
+
 /******************************************************************************
  * Fonts: Util
 *******************************************************************************/
@@ -12,11 +14,11 @@
  * Fonts: Sans-serif
 *******************************************************************************/
 @mixin font-sans-text() {
-    font-family: $sans-serif-text;
+    font-family: variables.$sans-serif-text;
     @include font-normal();
 }
 @mixin font-sans-text-medium() {
-    font-family: $sans-serif-text-medium;
+    font-family: variables.$sans-serif-text-medium;
     @include font-normal();
 }
 
@@ -26,8 +28,8 @@
  * Type
 *******************************************************************************/
 @mixin meta() {
-    color: $black;
-    font-size: $meta-size;
+    color: variables.$black;
+    font-size: variables.$meta-size;
     line-height: 1.444444;
     @include font-sans-text();
 }
@@ -35,33 +37,33 @@
     @include font-sans-text-medium();
 }
 @mixin p() {
-    font-size: $p-size;
+    font-size: variables.$p-size;
     line-height: 2.22222222;
     @include font-sans-text();
 }
 @mixin a() {
-    color: $black;
+    color: variables.$black;
     display: inline;
-    font-size: $p-size;
+    font-size: variables.$p-size;
     line-height: 2.22222222;
     text-decoration: none;
     @include font-sans-text();
 }
 @mixin h1() {
     display: inline-block;
-    font-size: $h1-size;
+    font-size: variables.$h1-size;
     font-weight: 600;
     line-height: 1.25;
     @include font-sans-text-medium();
 }
 @mixin h2() {
-    font-size: $h2-size;
+    font-size: variables.$h2-size;
     font-weight: 600;
     line-height: 1.2;
     @include font-sans-text-medium();
 }
 @mixin h3() {
-    font-size: $h3-size;
+    font-size: variables.$h3-size;
     line-height: 1.2;
     @include font-sans-text-medium();
 }
@@ -72,7 +74,7 @@
  * Layout / Spacing
 *******************************************************************************/
 @mixin layout-frame() {
-    padding: $header-fix-height ($photos-padding / 2) 0;
+    padding: variables.$header-fix-height calc(variables.$photos-padding / 2) 0;
 }
 
 
@@ -82,9 +84,9 @@
 *******************************************************************************/
 @mixin block-transition() {
     opacity: 0;
-    transform: translate3d( 0, $nudge-size, 0 );
-    transition: opacity $long-duration $ease-out,
-                transform $base-duration $ease;
+    transform: translate3d( 0, variables.$nudge-size, 0 );
+    transition: opacity variables.$long-duration variables.$ease-out,
+                transform variables.$base-duration variables.$ease;
 
     &.is-active {
         opacity: 1;

@@ -1,51 +1,51 @@
 /******************************************************************************
  * Config
 *******************************************************************************/
-@import "config/variables";
-@import "config/mixins";
+@use "config/variables";
+@use "config/mixins";
 
 
 
 /******************************************************************************
  * Core
 *******************************************************************************/
-@import "core/reset";
-@import "core/fonts";
-@import "core/icons";
-@import "core/document";
-@import "core/grid";
-@import "core/page";
-@import "core/typography";
-@import "core/images";
+@use "core/reset";
+@use "core/fonts";
+@use "core/icons";
+@use "core/document";
+@use "core/grid";
+@use "core/page";
+@use "core/typography";
+@use "core/images";
 
 
 
 /******************************************************************************
  * Modules
 *******************************************************************************/
-@import "modules/header";
-@import "modules/navigation";
-@import "modules/main";
-@import "modules/screens";
-@import "modules/project";
-@import "modules/animate";
-@import "modules/video";
+@use "modules/header";
+@use "modules/navigation";
+@use "modules/main";
+@use "modules/screens";
+@use "modules/project";
+@use "modules/animate";
+@use "modules/video";
 
 
 
 /******************************************************************************
  * Squarespace Hacks
 *******************************************************************************/
-@import "sqs/hacks";
-@import "sqs/blocks";
-@import "sqs/responsive";
+@use "sqs/hacks";
+@use "sqs/blocks";
+@use "sqs/responsive";
 
 
 
 /******************************************************************************
  * UI State
 *******************************************************************************/
-@import "state/states";
-@import "state/hovers";
-@import "state/modifiers";
-@import "state/responsive";
+@use "state/states";
+@use "state/hovers";
+@use "state/modifiers";
+@use "state/responsive" as responsive2;

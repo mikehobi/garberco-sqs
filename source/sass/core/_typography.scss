@@ -1,8 +1,11 @@
+@use "../config/mixins";
+@use "../config/variables";
+
 /******************************************************************************
  * Meta Data
 *******************************************************************************/
 .meta {
-    @include meta();
+    @include mixins.meta();
     }
 
 
@@ -11,7 +14,7 @@
  * Emphasis
 *******************************************************************************/
 .em {
-    @include b();
+    @include mixins.b();
     }
 
 
@@ -20,7 +23,7 @@
  * Paragraphs
 *******************************************************************************/
 .p {
-    @include p();
+    @include mixins.p();
     }
 
 
@@ -36,7 +39,7 @@
  * Links
 *******************************************************************************/
 .a {
-    @include a();
+    @include mixins.a();
     }
 
 
@@ -45,13 +48,13 @@
  * Headlines
 *******************************************************************************/
 .h1 {
-    @include h1();
+    @include mixins.h1();
     }
 .h2 {
-    @include h2();
+    @include mixins.h2();
 
     a {
-        border-bottom: 5px solid $black;
+        border-bottom: 5px solid variables.$black;
         }
 
     p + p {
@@ -59,7 +62,7 @@
         }
 }
 .h3 {
-    @include h3();
+    @include mixins.h3();
 
     strong {
         font-weight: 600;

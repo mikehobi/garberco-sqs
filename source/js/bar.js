@@ -5,7 +5,7 @@ import $ from "properjs-hobo";
 
 
 let _instance = null;
-const $_jsBar = $( '<div class="bar"><div class="bar__inner"></div></div>' );
+const $_jsBar = $( "<div class=\"bar\"><div class=\"bar__inner\"></div></div>" );
 const $_jsInner = $_jsBar.find( ".bar__inner" );
 
 

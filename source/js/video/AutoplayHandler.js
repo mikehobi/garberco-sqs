@@ -13,9 +13,10 @@ import mediabox from "./mediabox";
  *
  */
 class AutoplayHandler {
-    constructor ( $node, id ) {
+    constructor ( $node, id, muted ) {
         this.$node = $node;
         this.id = id;
+        this.muted = muted;
 
         this.bindEvents();
     }
@@ -53,6 +54,7 @@ class AutoplayHandler {
     onScroll () {
         if ( core.util.isElementInViewport( this.$node[ 0 ] ) ) {
             if ( !mediabox.isPlaying( this.id ) ) {
+                mediabox.setVolume( this.id, this.muted ? 0 : 1 );
                 mediabox.playMedia( this.id );
             }
 
